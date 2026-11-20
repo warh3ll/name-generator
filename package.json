@@ -1,0 +1,11 @@
+{
+  "name": "name-generator",
+  "version": "0.1.0",
+  "description": "Personal name generator: sci-fi, quirky and fantasy names with editable building blocks.",
+  "private": true,
+  "scripts": {
+    "test": "node test/smoke.js",
+    "samples": "node test/smoke.js --samples",
+    "start": "npx --yes serve ."
+  }
+}

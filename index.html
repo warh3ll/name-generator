@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Name Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Name Generator</h1>
+    <nav id="categories" aria-label="Categories"></nav>
+  </header>
+
+  <main>
+    <nav id="subcategories" aria-label="Generators"></nav>
+
+    <section id="panel">
+      <h2 id="gen-title"></h2>
+      <p id="gen-description"></p>
+
+      <div class="controls">
+        <button id="btn-one" class="primary">Generate one</button>
+        <span class="list-controls">
+          <label for="count">List of</label>
+          <input id="count" type="number" min="1" max="100" value="20">
+          <button id="btn-many">Generate list</button>
+        </span>
+      </div>
+
+      <div id="single" aria-live="polite"></div>
+
+      <div id="list-actions" hidden>
+        <button id="btn-copy-all" class="ghost">Copy all</button>
+      </div>
+      <ol id="results"></ol>
+    </section>
+
+    <aside id="saved-panel">
+      <h3>Saved <button id="btn-clear-saved" class="ghost small" hidden>Clear</button></h3>
+      <p id="saved-empty" class="muted">Click ☆ next to a name to keep it here (stored in this browser).</p>
+      <ul id="saved"></ul>
+    </aside>
+  </main>
+
+  <div id="toast" role="status"></div>
+
+  <!-- Core -->
+  <script src="src/engine.js"></script>
+  <script src="src/categories.js"></script>
+
+  <!-- Generators: one file each. Add a new one by adding a line here. -->
+  <script src="src/generators/scifi-character.js"></script>
+  <script src="src/generators/scifi-corpo.js"></script>
+  <script src="src/generators/scifi-hacking.js"></script>
+  <script src="src/generators/quirky-swedish-idioms.js"></script>
+  <script src="src/generators/quirky-portmanteau.js"></script>
+  <script src="src/generators/fantasy-witcher.js"></script>
+
+  <script src="src/app.js"></script>
+</body>
+</html>

@@ -45,7 +45,6 @@
     ['{first} of {place}', 18],
     ['{first} the {epithetThe}', 14],
     ['{first} {epithetOne}', 10],
-    ['{first} {surname}, called {epithetOne}', 10],
     ['{first} of the {school} School', 8],
     ['{first} {surname} of {place}', 8],
     ['Old {first}', 4],
